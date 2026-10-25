@@ -79,7 +79,7 @@ You'll get the short version by email. To see the detailed report, open the rout
    - macOS / Linux: `~/.claude/skills/inbox-triage/`
    - Windows: `%USERPROFILE%\.claude\skills\inbox-triage\`
 2. In the Claude app, ask: *"Run inbox-triage every day at 7 AM, and in weekly mode every Saturday at 7 AM."*
-3. On the first run it asks for your email address, where you want reports (chat, email or both) and your time zone.
+3. To get the report by email, create `~/.claude/inbox-triage/settings.md` containing `email: you@example.com`, `deliver: both` and `timezone: America/New_York`, each on its own line. Without this file, reports appear in chat only.
 
 These scheduled tasks only run while the app is open.
 
