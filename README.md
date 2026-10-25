@@ -6,11 +6,13 @@ Free skills for Claude (Claude Code, the Claude desktop app, and claude.ai). Eac
 
 | Skill | What it does |
 |---|---|
-| [inbox-triage](skills/inbox-triage/SKILL.md) | **Gmail only.** Tells you what in your inbox needs your attention: bills and to-dos first, then updates. Its weekly mode lists everything still pending. In Claude chat, ask whenever you like. With Claude Code, it can email you automatically every morning and every Saturday. |
+| [jai-inbox-triage](skills/jai-inbox-triage/SKILL.md) | **Gmail only.** Tells you what in your inbox needs your attention: bills and to-dos first, then updates. Its weekly mode lists everything still pending. In Claude chat, ask whenever you like. With Claude Code, it can email you automatically every morning and every Saturday. |
 
 ---
 
-## inbox-triage
+## jai-inbox-triage
+
+*(Formerly `inbox-triage`. If you installed the old version, delete it and install this one.)*
 
 > **Gmail only.** It doesn't work with Yahoo, Outlook or other providers. If you use one of those, set your account to auto-forward to a Gmail address and use the skill there.
 >
@@ -28,7 +30,7 @@ Free skills for Claude (Claude Code, the Claude desktop app, and claude.ai). Eac
 ### For Claude chat users (most people)
 
 1. **Connect Gmail:** go to [claude.ai/customize/connectors](https://claude.ai/customize/connectors), find **Gmail**, click **Connect** and sign in with Google.
-2. **Get the skill:** on this page, click the green **Code** button, then **Download ZIP**. Unzip it, open `skills/`, and zip only the `inbox-triage` folder.
+2. **Get the skill:** on this page, click the green **Code** button, then **Download ZIP**. Unzip it, open `skills/`, and zip only the `jai-inbox-triage` folder.
 3. **Add it to Claude:** in claude.ai, open **Settings → Capabilities**, and under **Skills**, upload that zip.
 4. **Use it:** in any chat, type *"check my email"*, or *"weekly email summary"* to see what's still pending.
 
@@ -65,7 +67,7 @@ Go to [claude.ai/code/routines](https://claude.ai/code/routines) and create two 
 For each one, use this prompt. Fill in your own email address, use `WEEKLY` instead of `DAILY` for the Saturday routine, and change the time zone if needed:
 
 ```
-Read skills/inbox-triage/SKILL.md in this repo and follow it in DAILY mode.
+Read skills/jai-inbox-triage/SKILL.md in this repo and follow it in DAILY mode.
 Settings: email: you@example.com, deliver: email, timezone: America/New_York, send_at: 07:00
 ```
 
@@ -75,10 +77,10 @@ You'll get the short version by email. To see the detailed report, open the rout
 
 **Option 2: On your computer (Claude desktop app)**
 
-1. Copy `skills/inbox-triage/` into your skills folder:
-   - macOS / Linux: `~/.claude/skills/inbox-triage/`
-   - Windows: `%USERPROFILE%\.claude\skills\inbox-triage\`
-2. In the Claude app, ask: *"Run inbox-triage every day at 7 AM, and in weekly mode every Saturday at 7 AM."*
+1. Copy `skills/jai-inbox-triage/` into your skills folder:
+   - macOS / Linux: `~/.claude/skills/jai-inbox-triage/`
+   - Windows: `%USERPROFILE%\.claude\skills\jai-inbox-triage\`
+2. In the Claude app, ask: *"Run jai-inbox-triage every day at 7 AM, and in weekly mode every Saturday at 7 AM."*
 3. To get the report by email, create `~/.claude/inbox-triage/settings.md` containing `email: you@example.com`, `deliver: both` and `timezone: America/New_York`, each on its own line. Without this file, reports appear in chat only.
 
 These scheduled tasks only run while the app is open.
