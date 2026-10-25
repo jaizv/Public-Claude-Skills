@@ -22,9 +22,9 @@ Read the settings in this order and use the first source that has them:
    deliver: chat        # chat | email | both
    timezone: America/New_York
    ```
-3. **Ask.** If no settings exist and the user is present, ask for their email address, where they want the report and their time zone, then save the answers to the settings file. In an unattended run with no settings, use `deliver: chat` and send nothing.
+3. **Defaults.** If there are no settings, use `deliver: chat`: show the report and send nothing. Don't ask for an email address or set anything up. Most people use this skill in Claude chat, where files aren't saved between conversations, so the questions would come back every time and could make people think the skill wants to send email. Ask for an email address only if the user asks to have the report emailed.
 
-Use the time zone for every date, so "due tomorrow" is correct where the user lives.
+For time zone, use the setting if there is one. Otherwise use the time zone from the conversation or the user's emails, and if neither shows one, write plain dates ("due Nov 9") instead of relative ones ("due tomorrow").
 
 ## 0. Is it time? (only when `send_at` is set)
 
