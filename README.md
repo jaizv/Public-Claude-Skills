@@ -102,4 +102,4 @@ These scheduled tasks only run while the app is open.
 
 ## License
 
-[MIT](LICENSE): free to use, change and share.
+[CC BY-NC-SA 4.0](LICENSE): free to use, change and share with credit. Not for sale. If you share a changed version, it must use the same license.
